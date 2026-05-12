@@ -24,7 +24,6 @@ jobs:
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_ROBOT_TOKEN }}
       - name: Build Image
+        run: make docker-build
+      - name: Push Image
         run: make docker-push
-      # - name: Push Image
-      #   run: make build-and-push
-      #   working-directory: ${{ github.workspace }}/images/PE/
