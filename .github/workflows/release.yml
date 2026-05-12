@@ -1,13 +1,18 @@
 name: release
 
 on:
-  push:
-    branches:
-      - "master"
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Image tag"
+        required: false
+        default: "hubert-workflow-test"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      IMG: quay.io/kubermatic/kubevirt-csi-driver-operator:${{ inputs.image_tag  }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

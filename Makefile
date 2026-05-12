@@ -15,6 +15,7 @@
 
 # Image URL to use all building/pushing image targets
 IMG ?= quay.io/kubermatic-labs/training-application:hubert-kvo-test2
+# IMG ?= quay.io/kubermatic/kubevirt-csi-driver-operator:github-actions-test
 # ENVTEST_K8S_VERSION refers to the version of kubebuilder assets to be downloaded by envtest binary.
 ENVTEST_K8S_VERSION = 1.25.0
 
