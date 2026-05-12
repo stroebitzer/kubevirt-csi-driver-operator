@@ -5,8 +5,7 @@ on:
     inputs:
       image_tag:
         description: "Image tag"
-        required: false
-        default: "hubert-workflow-test"
+        required: true
 
 jobs:
   build:
