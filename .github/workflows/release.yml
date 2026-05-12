@@ -3,7 +3,7 @@ name: Build and Push kubevirt-csi-driver-operator
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   build:
